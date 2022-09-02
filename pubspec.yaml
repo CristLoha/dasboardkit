@@ -8,6 +8,10 @@ environment:
 dependencies: 
   cupertino_icons: ^1.0.2
   get: 4.6.5
+  google_fonts: 3.0.0
+  flutter_svg: 1.1.4
+  eva_icons_flutter: 3.1.0
+  easy_sidemenu: 0.3.1
   flutter: 
     sdk: flutter
 
@@ -18,5 +22,7 @@ dev_dependencies:
     sdk: flutter
 
 flutter: 
+  assets: 
+    - assets/icon/
   uses-material-design: true
 
