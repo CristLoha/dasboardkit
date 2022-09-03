@@ -18,6 +18,7 @@ class HomeView extends GetView<HomeController> {
         ),
         child: SingleChildScrollView(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -327,7 +328,86 @@ class HomeView extends GetView<HomeController> {
                             Text('${DateTime.now()}'),
                           ),
                           DataCell(
-                            Text('2.3 Views'),
+                            Text('2.3K Views'),
+                          ),
+                          DataCell(
+                            Text('102 Comments'),
+                          ),
+                        ],
+                      ),
+                      DataRow(
+                        cells: [
+                          DataCell(
+                            Text('1'),
+                          ),
+                          DataCell(
+                            Text('How to build a Flutter Mobile App'),
+                          ),
+                          DataCell(
+                            Text('${DateTime.now()}'),
+                          ),
+                          DataCell(
+                            Text('5.3K Views'),
+                          ),
+                          DataCell(
+                            Text('250 Comments'),
+                          ),
+                        ],
+                      ),
+                      DataRow(
+                        cells: [
+                          DataCell(
+                            Text('2'),
+                          ),
+                          DataCell(
+                            Text('How to build a Flutter Mobile App'),
+                          ),
+                          DataCell(
+                            Text('${DateTime.now()}'),
+                          ),
+                          DataCell(
+                            Text('5.3K Views'),
+                          ),
+                          DataCell(
+                            Text('250 Comments'),
+                          ),
+                        ],
+                      ),
+                      DataRow(
+                        cells: [
+                          DataCell(
+                            Text('3'),
+                          ),
+                          DataCell(
+                            Text('How to build a Flutter Mobile App'),
+                          ),
+                          DataCell(
+                            Text('${DateTime.now()}'),
+                          ),
+                          DataCell(
+                            Text('5.3K Views'),
+                          ),
+                          DataCell(
+                            Text('250 Comments'),
+                          ),
+                        ],
+                      ),
+                      DataRow(
+                        cells: [
+                          DataCell(
+                            Text('4'),
+                          ),
+                          DataCell(
+                            Text('How to build a Flutter Mobile App'),
+                          ),
+                          DataCell(
+                            Text('${DateTime.now()}'),
+                          ),
+                          DataCell(
+                            Text('5.3K Views'),
+                          ),
+                          DataCell(
+                            Text('250 Comments'),
                           ),
                         ],
                       ),
