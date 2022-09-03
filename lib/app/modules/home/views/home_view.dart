@@ -216,10 +216,11 @@ class HomeView extends GetView<HomeController> {
                     ],
                   ),
                   Container(
-                    width: 250,
+                    width: 300,
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: 'Type Article Title',
+                        suffixIcon: Icon(Icons.search),
                         border: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Colors.black26,
@@ -230,9 +231,118 @@ class HomeView extends GetView<HomeController> {
                   ),
                 ],
               ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TextButton.icon(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.arrow_back,
+                      color: Color(0xff363740),
+                    ),
+                    label: Text(
+                      '2022, September 03, September 04',
+                      style: TextStyle(
+                        color: Color(0xff363740),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      DropdownButton(
+                          hint: Text('Filter by'),
+                          items: [
+                            DropdownMenuItem(
+                              value: 'Date',
+                              child: Text('Date'),
+                            ),
+                            DropdownMenuItem(
+                              value: 'Comments',
+                              child: Text('Comments'),
+                            ),
+                            DropdownMenuItem(
+                              value: 'Views',
+                              child: Text('Views'),
+                            ),
+                          ],
+                          onChanged: (_) {}),
+                      SizedBox(width: 20),
+                      DropdownButton(
+                          hint: Text('Order by'),
+                          items: [
+                            DropdownMenuItem(
+                              value: 'Date',
+                              child: Text('Date'),
+                            ),
+                            DropdownMenuItem(
+                              value: 'Comments',
+                              child: Text('Comments'),
+                            ),
+                            DropdownMenuItem(
+                              value: 'Views',
+                              child: Text('Views'),
+                            ),
+                          ],
+                          onChanged: (_) {}),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(height: 40),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  DataTable(
+                    headingRowColor: MaterialStateProperty.resolveWith(
+                      (states) => Colors.grey.shade200,
+                    ),
+                    columns: [
+                      DataColumn(
+                        label: Text('ID'),
+                      ),
+                      DataColumn(
+                        label: Text('Article Title'),
+                      ),
+                      DataColumn(
+                        label: Text('Creation Date'),
+                      ),
+                      DataColumn(
+                        label: Text('Views'),
+                      ),
+                      DataColumn(
+                        label: Text('Comments'),
+                      ),
+                    ],
+                    rows: [
+                      DataRow(
+                        cells: [
+                          DataCell(
+                            Text('0'),
+                          ),
+                          DataCell(
+                            Text('How to build a Flutter Web App'),
+                          ),
+                          DataCell(
+                            Text('${DateTime.now()}'),
+                          ),
+                          DataCell(
+                            Text('2.3 Views'),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+        backgroundColor: Color(0xff363740),
       ),
     );
   }
