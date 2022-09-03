@@ -194,6 +194,7 @@ class HomeView extends GetView<HomeController> {
               ),
               SizedBox(height: 30),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     children: [
@@ -213,6 +214,19 @@ class HomeView extends GetView<HomeController> {
                         ),
                       ),
                     ],
+                  ),
+                  Container(
+                    width: 250,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Type Article Title',
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black26,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
